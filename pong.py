@@ -92,3 +92,18 @@ screen.onkeypress(paddle_2_down, 'Down')
 
 while True:
     screen.update()
+
+    # ball movement
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
+
+    # collision with the upper wall
+    if ball.ycor() > 290:
+        ball.sety(290)
+        ball.dy *= -1
+
+    # collision with lowe wall
+    if ball.ycor() < -290:
+        ball.sety(-290)
+        ball.dy *= -1
+        
