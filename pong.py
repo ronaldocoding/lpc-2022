@@ -1,5 +1,4 @@
 import turtle
-import os
 
 # draw screen
 screen = turtle.Screen()
