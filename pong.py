@@ -106,4 +106,11 @@ while True:
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        
+
+    # collision with paddle 1
+    if ball.xcor() < -330 and paddle_1.ycor() + 50 > ball.ycor() > paddle_1.ycor() - 50:
+        ball.dx *= -1
+
+    # collision with paddle 2
+    if ball.xcor() > 330 and paddle_2.ycor() + 50 > ball.ycor() > paddle_2.ycor() - 50:
+        ball.dx *= -1
